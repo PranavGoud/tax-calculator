@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tax Calculator</h1>
+    <form id="taxForm">
+      <div class="input-wrapper">
+        <label for="grossIncome">Enter gross annual income<span class="tooltip">(?<span class="tooltiptext">Gross annual income is your total salary in a year before deductions</span>)</span>:</label>
+        <input type="number" id="grossIncome" min="0" required>
+        <div class="error" id="incomeError"></div>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="extraIncome">Enter extra income<span class="tooltip">(?<span class="tooltiptext">Extra income refers to any additional income you earn apart from your salary</span>)</span>:</label>
+        <input type="number" id="extraIncome" min="0">
+        <div class="error" id="extraIncomeError"></div>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="age">Enter age group<span class="tooltip">(?<span class="tooltiptext">Age group determines the tax rate applied</span>)</span>:</label>
+        <select id="age">
+          <option value="<40">&lt;40</option>
+          <option value="40-59">&ge;40 &lt;60</option>
+          <option value="≥60">&ge;60</option>
+        </select>
+        <div class="error" id="ageError"></div>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="deductions">Enter total applicable deductions<span class="tooltip">(?<span class="tooltiptext">Total applicable deductions are the deductions you can claim to reduce your taxable income</span>)</span>:</label>
+        <input type="number" id="deductions" min="0">
+        <div class="error" id="deductionsError"></div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tax Calculation Result</h2>
+      <p id="taxResult"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
