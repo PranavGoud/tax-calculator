@@ -1,0 +1,2 @@
+TAX CALCULATION USING HTML , CSS , JS.
+We are going to compute the tax in this project. We will compute the tax so that those with yearly incomes under Rs. 8 lakhs will not pay any tax and those with annual incomes over Rs. 8 lakhs will pay tax based on their age. Individuals under 40 years old will pay 30% in taxes, those between 41 and 59 years old will pay 40%, and those over 60 years old will pay 10%. 
